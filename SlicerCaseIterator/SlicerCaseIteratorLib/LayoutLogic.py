@@ -143,7 +143,7 @@ class CaseIteratorLayoutLogic(ScriptedLoadableModuleLogic):
             viewName = '%d_%d' % (row, column)
           rgb = [int(round(v * 255)) for v in self.lookupTable.GetTableValue(index)[:-1]]
           color = '#%0.2X%0.2X%0.2X' % tuple(rgb)
-          layoutDescription += self.sliceViewItemPattern.format(viewName=viewName, orientation=orientation, color=color)
+          layoutDescription += self.sliceViewItemPattern.format(viewName=viewName, orientation=default_orientation, color=color)
           actualViewNames.append(viewName)
           index += 1
         layoutDescription += '</layout></item>\n'
